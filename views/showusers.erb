@@ -1,16 +1,26 @@
 
-<%= @results %>
+<table class="table table-bordered"> <!--берем из tables на сайте botstrap-->
 
-<table class="table">
+    <thead>
+      <tr>
+        <th>Имя</th>
+        <th>Телефон</th>
+        <th>Дата</th>
+        <th>Парикмахер</th>
+        <th>Цвет</th>
+      </tr>  
+    </thead> 
 
-   <% @results.each do |row| %>
-  <tr>
-    <td><%= row['username'] %></td>
-    <td><%= row['phone'] %></td>
-    <td><%= row['datestamp'] %></td>
-    <td><%= row['barber'] %></td>
-    <td><%= row['color'] %></td>
-  </tr>
+    <body>  
+      <% @results.each do |row| %>
+        <tr>
+          <td><%= row['username'] %></td>
+          <td><%= row['phone'] %></td>
+          <td><%= row['datestamp'] %></td>
+          <td><%= row['barber'] %></td>
+          <td><%= row['color'] %></td>
+        </tr>
+    </body>    
 
   <% end %>
 
