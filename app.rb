@@ -16,6 +16,12 @@ def seed_db db, barbers
 	end
 end
 
+before do
+	db = SQLite3::Database.new 'barbershop.db'
+	db.results_as_hash = true
+	@barbers = db.execute 'select * from Barbers'
+end
+
 configure do
   db = SQLite3::Database.new 'barbershop.db'
   db.execute 'CREATE TABLE IF NOT EXISTS "Users"
