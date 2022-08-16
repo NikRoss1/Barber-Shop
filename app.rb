@@ -63,5 +63,5 @@ get '/contacts' do
 end
 
 get '/showusers' do
-	erb :schowusers
+	erb :showusers
 end
