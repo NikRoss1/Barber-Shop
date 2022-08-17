@@ -46,7 +46,7 @@ get '/' do
 	erb "Hello! <a href=\"https://github.com/bootstrap-ruby/sinatra-bootstrap\">Original</a> pattern has been modified for <a href=\"http://rubyschool.us/\">Ruby School</a>"			
 end
 
-get '/about' do
+get '/about' do 
 	erb :about
 end
 
@@ -79,7 +79,7 @@ db.execute 'insert into Users (username, phone, datestamp, barber, color)
  
 values (?, ?, ?, ?, ?)',[@username, @phone, @datetime, @barber, @color]
 
-	erb "OK, username is #{@username}, #{@phone}, #{@datetime}, #{@barber}, #{@color}"
+	erb "<h2>Спасибо, вы записались</h2>"
 
 end
 
